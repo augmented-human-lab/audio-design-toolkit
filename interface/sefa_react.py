@@ -360,6 +360,10 @@ def on_example_change():
         
 
 def main():
+    keeper_list = ['model_picked']
+    for key in keeper_list:
+        if key in st.session_state:
+            st.session_state[key] = st.session_state[key]
     if config.allow_analytics:
         google_analytics.set_google_analytics()
     st.markdown("<div style='display: flex;justify-content: center;'><h1 style='text-align: center; width: 500px;'>Exploring Environmental Sound Spaces - 2</h1></div>", unsafe_allow_html=True)
